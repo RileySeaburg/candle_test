@@ -29,7 +29,7 @@ checksum = "14c189c53d098945499cdfa7ecc63567cf3886b3332b312a5b4585d8d3a6a610"
 [[package]]
 name = "candle-core"
 version = "0.2.1"
-source = "git+https://github.com/huggingface/candle.git#e8e33752f4562d69cbef3de61d02676da112dfb8"
+source = "git+https://github.com/huggingface/candle.git#bbec527bb966b5050a9f8a3fe1382ea929e39d41"
 dependencies = [
  "byteorder",
  "candle-gemm",
@@ -175,10 +175,20 @@ dependencies = [
 [[package]]
 name = "candle-kernels"
 version = "0.2.1"
-source = "git+https://github.com/huggingface/candle.git#e8e33752f4562d69cbef3de61d02676da112dfb8"
+source = "git+https://github.com/huggingface/candle.git#bbec527bb966b5050a9f8a3fe1382ea929e39d41"
 dependencies = [
  "glob",
  "rayon",
+]
+
+[[package]]
+name = "candle-nn"
+version = "0.2.1"
+source = "git+https://github.com/huggingface/candle.git#bbec527bb966b5050a9f8a3fe1382ea929e39d41"
+dependencies = [
+ "candle-core",
+ "safetensors",
+ "thiserror",
 ]
 
 [[package]]
@@ -186,6 +196,7 @@ name = "candle_test"
 version = "0.1.0"
 dependencies = [
  "candle-core",
+ "candle-nn",
 ]
 
 [[package]]
